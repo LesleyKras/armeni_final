@@ -1,0 +1,521 @@
+html,body{
+    height: 100%;
+}
+
+body{
+    background-image: url("http://img.gawkerassets.com/img/18fs41bnvwyqvjpg/ku-xlarge.jpg");
+    background-position: center center;
+    background-repeat: repeat;
+    background-size: cover;
+}
+
+.lijndikte{
+    color: white;
+    padding-left: 10px;
+}
+
+
+.jumbotron{
+    overflow: hidden;
+    height: auto;
+    background-color: #525252;
+}
+.jumbotron p{
+    color: white;
+}
+
+
+#text{
+    float:left;
+    width:30%;
+    margin-left: 5%;
+    margin-right:5%;
+}
+
+#main{
+    height: 100%;
+    width: 100%;
+}
+#tmp_canvas {
+    position: absolute;
+    left: 0px; right: 0;
+    bottom: 0; top: 0;
+    cursor: crosshair;
+}
+
+
+.jumbo1{
+    height:auto;
+}
+
+#rightPanel{
+    float:left;
+    width:30%;
+    margin-left: 5%;
+    margin-right:5%;
+    overflow: hidden;
+}
+
+#kleuren{
+    float:left;
+}
+
+#sizes{
+    float:right;
+}
+
+#rightPanel > ul > li{
+    list-style: none;
+    margin-top: 5px;
+}
+
+ul li{
+    list-style: none;
+}
+
+ul li input{
+    width: 25px;
+    height: 25px;
+    margin-top:3px;
+    z-index: 100;
+}
+
+#red{
+    background-color: red;
+    color:white;
+}
+#green{
+    background-color: green;
+    color:white;
+}
+#yellow{
+    background-color: yellow;
+}
+#purple{
+    background-color: purple;
+    color:white;
+}
+#blue{
+    background-color: blue;
+    color:white;
+}
+#black{
+    background-color: black;
+    color: white;
+}
+#white{
+    background-color: white;
+}
+
+#eraser{
+    background-image:url("../img/eraser.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.txtColor{
+    color: #A10412;
+    text-decoration: none;
+    text-align: center;
+}
+
+.registerTxt{
+    text-align: center;
+    margin-top: 10px;
+}
+
+.txtColor a{
+    color: #A10412;
+    margin-top: 10px;
+}
+
+#register{
+margin-top: 10px;
+}
+
+.form-control:focus {
+    border-color: #A10412;
+    outline: 0px none;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset, 0px 0px 8px rgba(161, 4, 18, 0.6);
+}
+
+.collapse, .navbar-collapse{
+
+    background: -moz-linear-gradient(270deg, rgba(82,82,82,1) 0%, rgba(82,82,82,1) 13%, rgba(126,126,126,1) 59%, rgba(161,161,161,1) 94%); /* ff3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(82,82,82,1)), color-stop(13%, rgba(82,82,82,1)), color-stop(59%, rgba(126,126,126,1)), color-stop(94%, rgba(161,161,161,1))); /* safari4+,chrome */
+    background: -webkit-linear-gradient(270deg, rgba(82,82,82,1) 0%, rgba(82,82,82,1) 13%, rgba(126,126,126,1) 59%, rgba(161,161,161,1) 94%); /* safari5.1+,chrome10+ */
+    background: -o-linear-gradient(270deg, rgba(82,82,82,1) 0%, rgba(82,82,82,1) 13%, rgba(126,126,126,1) 59%, rgba(161,161,161,1) 94%); /* opera 11.10+ */
+    background: -ms-linear-gradient(270deg, rgba(82,82,82,1) 0%, rgba(82,82,82,1) 13%, rgba(126,126,126,1) 59%, rgba(161,161,161,1) 94%); /* ie10+ */
+    background: linear-gradient(180deg, rgba(82,82,82,1) 0%, rgba(82,82,82,1) 13%, rgba(126,126,126,1) 59%, rgba(161,161,161,1) 94%); /* w3c */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#525252', endColorstr='#A1A1A1',GradientType=0 ); /* ie6-9 */
+
+}
+
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:focus, .navbar-default .navbar-nav > .active > a:hover{
+    color: #A10412;
+}
+
+.navbar-default .navbar-brand{
+    color: white;
+    background: -moz-linear-gradient(270deg, rgba(82,82,82,1) 0%, rgba(82,82,82,1) 13%, rgba(126,126,126,1) 59%, rgba(161,161,161,1) 94%); /* ff3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(82,82,82,1)), color-stop(13%, rgba(82,82,82,1)), color-stop(59%, rgba(126,126,126,1)), color-stop(94%, rgba(161,161,161,1))); /* safari4+,chrome */
+    background: -webkit-linear-gradient(270deg, rgba(82,82,82,1) 0%, rgba(82,82,82,1) 13%, rgba(126,126,126,1) 59%, rgba(161,161,161,1) 94%); /* safari5.1+,chrome10+ */
+    background: -o-linear-gradient(270deg, rgba(82,82,82,1) 0%, rgba(82,82,82,1) 13%, rgba(126,126,126,1) 59%, rgba(161,161,161,1) 94%); /* opera 11.10+ */
+    background: -ms-linear-gradient(270deg, rgba(82,82,82,1) 0%, rgba(82,82,82,1) 13%, rgba(126,126,126,1) 59%, rgba(161,161,161,1) 94%); /* ie10+ */
+    background: linear-gradient(180deg, rgba(82,82,82,1) 0%, rgba(82,82,82,1) 13%, rgba(126,126,126,1) 59%, rgba(161,161,161,1) 94%); /* w3c */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#525252', endColorstr='#A1A1A1',GradientType=0 ); /* ie6-9 */
+}
+.navbar-toggle{
+    background-color: darkgray;
+}
+
+
+#kleuren p{
+    color: white;
+    padding-left: 27px;
+}
+
+#sizes p{
+    color: inherit;
+}
+
+.navbar-header{
+    background: -moz-linear-gradient(270deg, rgba(82,82,82,1) 0%, rgba(82,82,82,1) 13%, rgba(126,126,126,1) 59%, rgba(161,161,161,1) 94%); /* ff3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(82,82,82,1)), color-stop(13%, rgba(82,82,82,1)), color-stop(59%, rgba(126,126,126,1)), color-stop(94%, rgba(161,161,161,1))); /* safari4+,chrome */
+    background: -webkit-linear-gradient(270deg, rgba(82,82,82,1) 0%, rgba(82,82,82,1) 13%, rgba(126,126,126,1) 59%, rgba(161,161,161,1) 94%); /* safari5.1+,chrome10+ */
+    background: -o-linear-gradient(270deg, rgba(82,82,82,1) 0%, rgba(82,82,82,1) 13%, rgba(126,126,126,1) 59%, rgba(161,161,161,1) 94%); /* opera 11.10+ */
+    background: -ms-linear-gradient(270deg, rgba(82,82,82,1) 0%, rgba(82,82,82,1) 13%, rgba(126,126,126,1) 59%, rgba(161,161,161,1) 94%); /* ie10+ */
+    background: linear-gradient(180deg, rgba(82,82,82,1) 0%, rgba(82,82,82,1) 13%, rgba(126,126,126,1) 59%, rgba(161,161,161,1) 94%); /* w3c */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#525252', endColorstr='#A1A1A1',GradientType=0 ); /* ie6-9 */
+
+}
+
+.navbar-default .navbar-nav > li > a:hover{
+    color: #A10412;
+}
+
+.navbar-default .navbar-nav > li > a:focus{
+    color: black;
+}
+
+.container{
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 5%;
+}
+
+.btn-info{
+    background-color: #a10412;
+    border-color: #525252;
+
+}
+
+.btn-info:hover{
+    background-color: #4e040b;
+    border-color: #525252;
+
+}
+
+.panel-title{
+    background-color: #525252;
+    color: white;
+}
+
+.panel-default > .panel-heading{
+    background-color: #525252;
+    border-color: #A10412;
+}
+
+#loginForm{
+    width:40%;
+}
+
+.navbar{
+    border: none;
+}
+
+.glyphicon-log-in{
+    margin-right: 4px;
+}
+
+#loginKnop{
+    width: 50%;
+    margin: 0 auto;
+}
+
+.passwordLogin{
+    width:80%;
+    margin:0 auto;
+}
+
+.usernameLogin{
+    width:80%;
+    margin:0 auto;
+}
+
+.loginLabel{
+    margin-left: 10%;
+}
+
+#navbarCollapse{
+    border-bottom: 1px solid white;
+}
+
+.navbar-default .navbar-nav > li > a {
+    color: white;
+    font-size: 1.3em;
+    font-family: "Poiret One";
+}
+
+.navbar-default .navbar-brand:hover {
+    color: white;
+    background-color: transparent;
+}
+
+.navbar-default .navbar-brand{
+    font-family: "Poiret One";
+}
+
+#text{
+    background-color: white;
+    opacity: 0.9;
+}
+
+@media only screen and (max-width:1257px)
+{
+    #sketch
+    {
+        width: 100%;
+        height: 100%;
+        margin-bottom: 2%;
+    }
+
+    #drawText{
+        width:100%;
+        margin-bottom: 2%;
+    }
+}
+
+@media only screen and (max-width:750px)
+{
+    #sketch
+    {
+        width: 20px;
+        height: 20px;
+        margin-bottom: 2%;
+        margin: 0 auto;
+    }
+
+    #drawText{
+        width:100%;
+        margin-bottom: 2%;
+    }
+
+    #paint{
+        background-image: url("http://www.arcegadesign.com/images/mannequin.png");
+        background-color: #d2ddda;
+        background-size: 40% 80%;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 20px;
+        width: 20px;
+        margin: 0 auto;
+    }
+
+    .row{
+        width: 99%;
+    }
+}
+
+#paint{
+    background-image: url("http://www.arcegadesign.com/images/mannequin.png");
+    background-color: #d2ddda;
+    background-size: 40% 80%;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 550px;
+    width: 550px;
+}
+
+#sketch{
+    width: 550px;
+    margin-bottom: 2%;
+    height: 550px;
+}
+
+
+
+#drawText{
+    margin-left: 0%;
+    color: white;
+}
+
+.row{
+    height: 100%;
+    margin: 0 auto;
+}
+
+.centered-form{
+    margin: 0 auto;
+}
+
+.galleryImg{
+    background-color: white;
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+    border-radius:5px;
+    border: 2px solid #a10412;
+    background-image: url("http://www.arcegadesign.com/images/mannequin.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 75px 158px;
+
+
+}
+
+#galleryContent{
+    margin: 0 auto;
+    width: 93%;
+
+}
+
+.loginText{
+    margin-top:5px;
+    text-align: center;
+    color: #A10412;
+}
+
+#textIndex{
+    width: 40%;
+    margin-left: 5%;
+    margin-top:5%;
+    padding-top: 5%;
+    background-color: white;
+    opacity: 0.8;
+
+
+}
+
+
+.homeImage{
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    margin-bottom: 2%;
+}
+
+.homeText{
+    margin: 0 auto;
+    background-color: #525252;
+    color: white;
+    height: 100%;
+    opacity: 0.8;
+    padding: 3%;
+    margin-bottom: 1%;
+}
+
+.homeText p{
+     margin-left: 5%;
+     margin-right: 5%;
+    text-align: center;
+ }
+
+.homeText h1{
+    margin-left: 5%;
+    margin-right: 5%;
+    text-align: center;
+}
+
+.homeText h4{
+    text-align: center;
+    color: #A10412;
+}
+
+.wrapper {
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 3%;
+}
+
+#mapCanvas{
+    width: 90%;
+    height: 20%;
+    margin: 0 auto;
+}
+
+#buttons{
+    display: inline-block;
+    float: right;
+    margin-right: 1%;
+}
+
+#kleuren{
+    float: left;
+}
+
+#configButtons{
+    float: left;
+}
+
+#configButtons li input{
+    width: 100%;
+}
+
+#lineButtons{
+    float: left;
+}
+
+#canvasText{
+    display: inline-block;
+}
+
+.galleryUrl{
+    margin-left: 5%;
+    color: #A10412;
+    text-decoration: none;
+}
+
+.galleryUrl:hover{
+    text-decoration: none;
+    border-bottom: 1px solid #a10412;
+    color: white;
+}
+
+@media only screen and (max-width:770px) {
+    #buttons {
+        display: inline-block;
+        float: left;
+    }
+
+    #paint {
+        background-image: url("http://www.arcegadesign.com/images/mannequin.png");
+        background-color: #d2ddda;
+        background-size: 40% 80%;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 550px;
+        width: 330px;
+    }
+
+    .galleryImg{
+        margin-left: 21%;
+    }
+
+    #buttons{
+        margin-right:2%;
+    }
+
+    #sketch{
+        width: 330px;
+        margin-bottom: 2%;
+        height: 550px;
+    }
+
+    #drawText{
+        float: left;
+        margin-left: 0px;
+    }
+
+}
